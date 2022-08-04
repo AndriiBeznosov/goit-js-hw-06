@@ -9,11 +9,12 @@ input.addEventListener("blur", onBlur);
 
 function onBlur(event) {
   const data = event.target.dataset.length;
-  const value = event.target.value.length;
+  const value = String(event.target.value.length);
   console.log(value);
   console.log(data);
 
-  if (value <= data) {
+  if (value !== data) {
+    // console.log(value === data);
     this.classList.remove("valid");
     this.classList.add("invalid");
   } else {
