@@ -10,9 +10,11 @@ const containerControls = document.querySelector("#controls");
 const createBtn = document.querySelector("[data-create]");
 const destroyBtn = document.querySelector("[data-destroy]");
 const boxes = document.querySelector("#boxes");
+const input = document.querySelector("#controls input");
 
 createBtn.addEventListener("click", createBoxes);
 destroyBtn.addEventListener("click", destroyBoxes);
+input.addEventListener("click", destroyBoxes);
 
 let widthHeigth = 30;
 
@@ -33,9 +35,11 @@ function createBoxes() {
   }
 }
 
-function destroyBoxes() {
+function destroyBoxes(event) {
   boxes.innerHTML = " ";
   widthHeigth = 30;
+  input.value = " ";
+  console.dir(input.value);
 }
 
 function getRandomHexColor() {
