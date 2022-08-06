@@ -3,7 +3,7 @@
 const changeInput = document.querySelector("#font-size-control");
 const textSpan = document.querySelector("#text");
 
-changeInput.addEventListener("change", changeInputFontSize);
+changeInput.addEventListener("input", changeInputFontSize);
 
 function changeInputFontSize(event) {
   textSpan.style.fontSize = `${event.currentTarget.value}px`;
