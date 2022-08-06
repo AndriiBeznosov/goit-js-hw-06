@@ -14,7 +14,6 @@ const input = document.querySelector("#controls input");
 
 createBtn.addEventListener("click", createBoxes);
 destroyBtn.addEventListener("click", destroyBoxes);
-input.addEventListener("click", destroyBoxes);
 
 let widthHeigth = 30;
 
@@ -38,8 +37,7 @@ function createBoxes() {
 function destroyBoxes(event) {
   boxes.innerHTML = " ";
   widthHeigth = 30;
-  input.value = " ";
-  console.dir(input.value);
+  input.value = "";
 }
 
 function getRandomHexColor() {
