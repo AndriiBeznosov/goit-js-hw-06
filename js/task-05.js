@@ -6,5 +6,9 @@ const editSpan = document.querySelector("#name-output");
 onInput.addEventListener("input", edit);
 
 function edit(event) {
-  editSpan.textContent = event.currentTarget.value;
+  if (event.currentTarget.value === "") {
+    editSpan.textContent = "Anonymous";
+  } else {
+    editSpan.textContent = event.currentTarget.value;
+  }
 }

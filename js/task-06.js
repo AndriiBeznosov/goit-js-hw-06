@@ -10,15 +10,16 @@ input.addEventListener("blur", onBlur);
 function onBlur(event) {
   const data = event.target.dataset.length;
   const value = String(event.target.value.length);
-  console.log(value);
-  console.log(data);
 
   if (value !== data) {
-    // console.log(value === data);
     this.classList.remove("valid");
     this.classList.add("invalid");
+    console.log(
+      "Кільксть введених символів не відповідае умові, потрібно ввести 6 символів",
+    );
   } else {
     this.classList.remove("invalid");
     this.classList.add("valid");
+    console.log(`Результат: ${event.target.value}`);
   }
 }
